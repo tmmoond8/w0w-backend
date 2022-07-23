@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "strapi develop",
     "start": "strapi start",
+    "pm2": "pm2 start server.js --name w0w-backend",
     "build": "strapi build",
     "strapi": "strapi"
   },
