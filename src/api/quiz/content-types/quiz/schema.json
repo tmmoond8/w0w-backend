@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quizzes",
+  "info": {
+    "singularName": "quiz",
+    "pluralName": "quizzes",
+    "displayName": "quiz"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "answer": {
+      "type": "string"
+    },
+    "syllables": {
+      "type": "string"
+    },
+    "hint": {
+      "type": "string"
+    },
+    "quizSet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::quiz-set.quiz-set",
+      "inversedBy": "quizzes"
+    }
+  }
+}

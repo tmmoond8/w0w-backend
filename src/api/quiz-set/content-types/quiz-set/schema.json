@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quiz_sets",
+  "info": {
+    "singularName": "quiz-set",
+    "pluralName": "quiz-sets",
+    "displayName": "QuizSet"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "ogTitle": {
+      "type": "string"
+    },
+    "ogDescription": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "ogImage": {
+      "type": "string"
+    },
+    "quizzes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::quiz.quiz",
+      "mappedBy": "quizSet"
+    }
+  }
+}
